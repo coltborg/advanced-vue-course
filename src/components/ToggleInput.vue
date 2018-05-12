@@ -1,6 +1,6 @@
 <template>
   <span
-    :aria-checked="value.toString()"
+    :aria-checked="toggled.toString()"
     class="toggle"
     role="checkbox"
     tabindex="0"
@@ -11,15 +11,19 @@
 <script>
 export default {
   name: "ToggleInput",
+  model: {
+    prop: "toggled",
+    event: "toggle"
+  },
   props: {
-    value: {
+    toggled: {
       type: Boolean,
       default: false
     }
   },
   methods: {
     toggle() {
-      this.$emit("input", !this.value);
+      this.$emit("toggle", !this.toggled);
     }
   }
 };
