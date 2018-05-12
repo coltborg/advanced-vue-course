@@ -1,23 +1,20 @@
 <template>
-  <div id="app">
-    <h1>Hello World</h1>
+  <div class="min-h-screen bg-grey-darker p-8">
+    <div class="max-w-sm mx-auto">
+      <user-settings-form/>
+    </div>
   </div>
 </template>
 
 <script>
+import UserSettingsForm from "./components/UserSettingsForm.vue";
+
 export default {
-  name: "app",
-  components: {}
+  name: "App",
+  components: {
+    UserSettingsForm
+  }
 };
 </script>
 
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style src="./assets/css/app.css"/>
