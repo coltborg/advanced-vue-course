@@ -1,20 +1,26 @@
 <template>
-  <div class="min-h-screen bg-grey-darker p-8">
-    <div class="max-w-sm mx-auto">
-      <user-settings-form/>
-    </div>
+  <div>
+    <p class="p-2 shadow flex">
+      <router-link
+        :to="{ name: 'ControlledComponent' }"
+        class="mr-3 text-blue hover:text-blue-dark no-underline">
+        Controlled Component
+      </router-link>
+      <router-link
+        :to="{ name: 'ThirdPartyControlledComponent' }"
+        class="mr-3 text-blue hover:text-blue-dark no-underline">
+        Third party controlled component
+      </router-link>
+    </p>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import UserSettingsForm from "./components/UserSettingsForm.vue";
-
 export default {
-  name: "App",
-  components: {
-    UserSettingsForm
-  }
+  name: "App"
 };
 </script>
 
+<style src="../node_modules/pikaday/css/pikaday.css"/>
 <style src="./assets/css/app.css"/>
