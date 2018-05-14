@@ -11,6 +11,11 @@
         class="mr-3 text-blue hover:text-blue-dark no-underline">
         Third party controlled component
       </router-link>
+      <router-link
+        :to="{ name: 'ClosingOnEscape' }"
+        class="mr-3 text-blue hover:text-blue-dark no-underline">
+        Closing on escape
+      </router-link>
     </p>
     <router-view/>
   </div>
