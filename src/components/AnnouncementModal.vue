@@ -30,10 +30,22 @@ export default {
       default: false,
     },
   },
+  created () {
+    const escapeHandler = (e) => {
+      if (this.show && e.key === 'Escape') {
+        this.dismiss();
+      }
+    };
+
+    document.addEventListener('keydown', escapeHandler);
+    this.$once('hook:destroyed', () => {
+      document.removeEventListener('keydown', escapeHandler);
+    });
+  },
   methods: {
     dismiss() {
       this.$emit('close');
     },
-  }
+  },
 };
 </script>
