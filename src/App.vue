@@ -16,6 +16,11 @@
         class="mr-3 text-blue hover:text-blue-dark no-underline">
         Closing on escape
       </router-link>
+      <router-link
+        :to="{ name: 'BackgroundScrolling' }"
+        class="mr-3 text-blue hover:text-blue-dark no-underline">
+        Background scrolling
+      </router-link>
     </p>
     <router-view/>
   </div>
