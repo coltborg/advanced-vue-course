@@ -1,9 +1,8 @@
 <template>
   <button
-    class="text-red-dark hover:underline"
     type="button"
     @click="confirmDeleteModalOpen = true">
-    Delete Account
+    <slot/>
     <portal
       v-if="confirmDeleteModalOpen"
       to="modals">
