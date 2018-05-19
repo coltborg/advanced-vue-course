@@ -26,6 +26,11 @@
         class="mr-3 text-blue hover:text-blue-dark no-underline">
         Vue portals
       </router-link>
+      <router-link
+        :to="{ name: 'ReuseVuePortals' }"
+        class="mr-3 text-blue hover:text-blue-dark no-underline">
+        Reuse vue portals
+      </router-link>
     </p>
     <router-view/>
   </div>

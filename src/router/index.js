@@ -3,6 +3,7 @@ import ThirdPartyControlledComponent from '../pages/ThirdPartyControlledComponen
 import ClosingOnEscape from '../pages/ClosingOnEscape';
 import BackgroundScrolling from '../pages/BackgroundScrolling';
 import VuePortals from '../pages/VuePortals';
+import ReuseVuePortals from '../pages/ReuseVuePortals';
 
 export default [
   {
@@ -29,5 +30,10 @@ export default [
     component: VuePortals,
     path: '/vue-portals',
     name: 'VuePortals',
+  },
+  {
+    component: ReuseVuePortals,
+    path: '/reuse-vue-portals',
+    name: 'ReuseVuePortals',
   },
 ]
