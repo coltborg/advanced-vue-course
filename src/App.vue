@@ -21,6 +21,11 @@
         class="mr-3 text-blue hover:text-blue-dark no-underline">
         Background scrolling
       </router-link>
+      <router-link
+        :to="{ name: 'VuePortals' }"
+        class="mr-3 text-blue hover:text-blue-dark no-underline">
+        Vue portals
+      </router-link>
     </p>
     <router-view/>
   </div>

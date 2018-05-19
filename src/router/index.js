@@ -2,6 +2,7 @@ import ControlledComponent from '../pages/ControlledComponent';
 import ThirdPartyControlledComponent from '../pages/ThirdPartyControlledComponent';
 import ClosingOnEscape from '../pages/ClosingOnEscape';
 import BackgroundScrolling from '../pages/BackgroundScrolling';
+import VuePortals from '../pages/VuePortals';
 
 export default [
   {
@@ -23,5 +24,10 @@ export default [
     component: BackgroundScrolling,
     path: '/background-scrolling',
     name: 'BackgroundScrolling',
+  },
+  {
+    component: VuePortals,
+    path: '/vue-portals',
+    name: 'VuePortals',
   },
 ]
