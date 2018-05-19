@@ -31,6 +31,11 @@
         class="mr-3 text-blue hover:text-blue-dark no-underline">
         Reuse vue portals
       </router-link>
+      <router-link
+        :to="{ name: 'UsingSlots' }"
+        class="mr-3 text-blue hover:text-blue-dark no-underline">
+        Using slots
+      </router-link>
     </p>
     <router-view/>
   </div>

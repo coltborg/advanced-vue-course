@@ -4,6 +4,7 @@ import ClosingOnEscape from '../pages/ClosingOnEscape';
 import BackgroundScrolling from '../pages/BackgroundScrolling';
 import VuePortals from '../pages/VuePortals';
 import ReuseVuePortals from '../pages/ReuseVuePortals';
+import UsingSlots from '../pages/UsingSlots';
 
 export default [
   {
@@ -35,5 +36,10 @@ export default [
     component: ReuseVuePortals,
     path: '/reuse-vue-portals',
     name: 'ReuseVuePortals',
+  },
+  {
+    component: UsingSlots,
+    path: '/using-slots',
+    name: 'UsingSlots',
   },
 ]
