@@ -5,6 +5,7 @@ import BackgroundScrolling from '../pages/BackgroundScrolling';
 import VuePortals from '../pages/VuePortals';
 import ReuseVuePortals from '../pages/ReuseVuePortals';
 import UsingSlots from '../pages/UsingSlots';
+import ModalComposition from '../pages/ModalComposition';
 
 export default [
   {
@@ -41,5 +42,10 @@ export default [
     component: UsingSlots,
     path: '/using-slots',
     name: 'UsingSlots',
+  },
+  {
+    component: ModalComposition,
+    path: '/modal-composition',
+    name: 'ModalComposition',
   },
 ]

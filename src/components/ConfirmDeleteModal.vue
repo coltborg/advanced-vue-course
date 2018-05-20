@@ -1,35 +1,38 @@
 <template>
-  <div
-    v-show="show"
-    class="modal-backdrop">
-    <div class="modal">
-      <h1 class="text-center text-2xl font-bold mb-4">
-        Are you sure?
-      </h1>
-      <p class="text-center text-grey-darker mb-6">
-        Deleting your account cannot be undone.
-      </p>
-      <div class="text-center">
-        <button
-          type="button"
-          class="btn btn-grey mr-4"
-          @click="cancel">
-          Cancel
-        </button>
-        <button
-          type="button"
-          class="btn btn-red"
-          @click="confirmDelete">
-          Delete it
-        </button>
-      </div>
+  <modal-dialog
+    :show="show"
+    @close="cancel">
+    <h1 class="text-center text-2xl font-bold mb-4">
+      Are you sure?
+    </h1>
+    <p class="text-center text-grey-darker mb-6">
+      Deleting your account cannot be undone.
+    </p>
+    <div class="text-center">
+      <button
+        type="button"
+        class="btn btn-grey mr-4"
+        @click="cancel">
+        Cancel
+      </button>
+      <button
+        type="button"
+        class="btn btn-red"
+        @click="confirmDelete">
+        Delete it
+      </button>
     </div>
-  </div>
+  </modal-dialog>
 </template>
 
 <script>
+import ModalDialog from "./ModalDialog";
+
 export default {
   name: "ConfirmDeleteModal",
+  components: {
+    ModalDialog
+  },
   props: {
     show: {
       type: Boolean,

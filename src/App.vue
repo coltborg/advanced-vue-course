@@ -36,6 +36,11 @@
         class="mr-3 text-blue hover:text-blue-dark no-underline">
         Using slots
       </router-link>
+      <router-link
+        :to="{ name: 'ModalComposition' }"
+        class="mr-3 text-blue hover:text-blue-dark no-underline">
+        Modal composition
+      </router-link>
     </p>
     <router-view/>
   </div>

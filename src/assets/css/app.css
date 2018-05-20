@@ -461,6 +461,15 @@ html {
   background-color: #6574cd;
   color: #fff;
 }
+.btn-red-outline {
+  border-width: 1px;
+  border-color: #e3342f;
+  color: #e3342f;
+}
+.btn-red-outline:hover {
+  background-color: #e3342f;
+  color: #fff;
+}
 .btn-pill {
   line-height: 1.5;
   border-radius: 9999px;
