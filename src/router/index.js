@@ -6,6 +6,7 @@ import VuePortals from '../pages/VuePortals';
 import ReuseVuePortals from '../pages/ReuseVuePortals';
 import UsingSlots from '../pages/UsingSlots';
 import ModalComposition from '../pages/ModalComposition';
+import StartingRenderlessComponents from '../pages/StartingRenderlessComponents';
 
 export default [
   {
@@ -47,5 +48,10 @@ export default [
     component: ModalComposition,
     path: '/modal-composition',
     name: 'ModalComposition',
+  },
+  {
+    component: StartingRenderlessComponents,
+    path: '/starting-renderless-components',
+    name: 'StartingRenderlessComponents',
   },
 ]

@@ -41,6 +41,11 @@
         class="mr-3 text-blue hover:text-blue-dark no-underline">
         Modal composition
       </router-link>
+      <router-link
+        :to="{ name: 'StartingRenderlessComponents' }"
+        class="mr-3 text-blue hover:text-blue-dark no-underline">
+        Starting renderless components
+      </router-link>
     </p>
     <router-view/>
   </div>
