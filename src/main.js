@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import PortalVue from 'portal-vue'
 import App from './App.vue'
 import routes from './router/index'
+
+Vue.use(PortalVue)
 
 const router = new VueRouter({
   routes
