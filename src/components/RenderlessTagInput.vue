@@ -11,9 +11,15 @@ export default {
       default: () => [],
     },
   },
+  methods: {
+    removeTag(tag) {
+      this.$emit('update', this.tags.filter(t => t !== tag));
+    },
+  },
   render() {
     return this.$scopedSlots.default({
       tags: this.tags,
+      removeTag: this.removeTag,
     });
   },
 };
