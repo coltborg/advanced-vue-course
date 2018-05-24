@@ -27,7 +27,7 @@ export default {
   name: 'TagInput',
   model: {
     prop: 'tags',
-    event: 'update'
+    event: 'update',
   },
   props: {
     tags: {
@@ -35,7 +35,7 @@ export default {
       default: () => [],
     },
   },
-  data () {
+  data() {
     return {
       input: '',
     };

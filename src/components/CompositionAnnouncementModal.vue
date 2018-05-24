@@ -20,35 +20,35 @@
 </template>
 
 <script>
-import ModalDialog from "../components/ModalDialog";
+import ModalDialog from '../components/ModalDialog';
 
 export default {
-  name: "CompositionAnnouncementModal",
+  name: 'CompositionAnnouncementModal',
   components: {
-    ModalDialog
+    ModalDialog,
   },
   props: {
     show: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   created() {
-    const escapeHandler = e => {
-      if (this.show && e.key === "Escape") {
+    const escapeHandler = (e) => {
+      if (this.show && e.key === 'Escape') {
         this.dismiss();
       }
     };
 
-    document.addEventListener("keydown", escapeHandler);
-    this.$once("hook:destroyed", () => {
-      document.removeEventListener("keydown", escapeHandler);
+    document.addEventListener('keydown', escapeHandler);
+    this.$once('hook:destroyed', () => {
+      document.removeEventListener('keydown', escapeHandler);
     });
   },
   methods: {
     dismiss() {
-      this.$emit("close");
-    }
-  }
+      this.$emit('close');
+    },
+  },
 };
 </script>

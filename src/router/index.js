@@ -54,4 +54,4 @@ export default [
     path: '/starting-renderless-components',
     name: 'StartingRenderlessComponents',
   },
-]
+];

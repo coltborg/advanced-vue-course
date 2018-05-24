@@ -38,34 +38,34 @@
 </template>
 
 <script>
-import ToggleInput from "./ToggleInput.vue";
-import DeleteAccountButton from "./DeleteAccountButton";
+import ToggleInput from './ToggleInput';
+import DeleteAccountButton from './DeleteAccountButton';
 
 export default {
-  name: "PortalUserSettingsForm",
+  name: 'PortalUserSettingsForm',
   components: {
     ToggleInput,
-    DeleteAccountButton
+    DeleteAccountButton,
   },
   props: {
     accountId: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
   data() {
     return {
-      email: "jane@example.com",
-      receiveNewsletter: false
+      email: 'jane@example.com',
+      receiveNewsletter: false,
     };
   },
   methods: {
     submit() {
-      console.log("Submitting preferences...", {
+      console.log('Submitting preferences...', {
         email: this.email,
-        receiveNewsletter: this.receiveNewsletter
+        receiveNewsletter: this.receiveNewsletter,
       });
-    }
-  }
+    },
+  },
 };
 </script>

@@ -11,23 +11,23 @@
 </template>
 
 <script>
-import ConfirmDeleteModal from "./ConfirmDeleteModal";
+import ConfirmDeleteModal from './ConfirmDeleteModal';
 
 export default {
-  name: "DeleteAccountButton",
+  name: 'DeleteAccountButton',
   components: {
-    ConfirmDeleteModal
+    ConfirmDeleteModal,
   },
   props: {
     accountId: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
   data() {
     return {
-      confirmDeleteModalOpen: false
+      confirmDeleteModalOpen: false,
     };
-  }
+  },
 };
 </script>

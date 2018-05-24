@@ -8,37 +8,37 @@
 </template>
 
 <script>
-import Pikaday from "pikaday";
+import Pikaday from 'pikaday';
 
 export default {
-  name: "DatePicker",
+  name: 'DatePicker',
   model: {
-    prop: "date",
-    event: "select"
+    prop: 'date',
+    event: 'select',
   },
   props: {
     date: {
       type: String,
-      required: true
+      required: true,
     },
     format: {
       type: String,
-      default: "YYYY-MM-DD"
+      default: 'YYYY-MM-DD',
     },
     options: {
       type: Object,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
   mounted() {
     const picker = new Pikaday({
       field: this.$refs.input,
       format: this.format,
       onSelect: () => {
-        this.$emit("select", picker.toString());
+        this.$emit('select', picker.toString());
       },
-      ...this.options
+      ...this.options,
     });
-  }
+  },
 };
 </script>

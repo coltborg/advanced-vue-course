@@ -51,14 +51,14 @@
 </template>
 
 <script>
-import PrimaryButton from "../components/PrimaryButton";
-import MediaCard from "../components/MediaCard";
+import PrimaryButton from '../components/PrimaryButton';
+import MediaCard from '../components/MediaCard';
 
 export default {
-  name: "UsingSlots",
+  name: 'UsingSlots',
   components: {
     PrimaryButton,
-    MediaCard
-  }
+    MediaCard,
+  },
 };
 </script>

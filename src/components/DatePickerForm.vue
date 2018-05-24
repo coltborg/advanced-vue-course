@@ -11,21 +11,17 @@
 </template>
 
 <script>
-import DatePicker from "./DatePicker";
+import DatePicker from './DatePicker';
 
 export default {
-  name: "DatePickerForm",
+  name: 'DatePickerForm',
   components: {
-    DatePicker
+    DatePicker,
   },
   data() {
     return {
-      date: "May 01 2018"
+      date: 'May 01 2018',
     };
-  }
+  },
 };
 </script>
-
-<style>
-
-</style>

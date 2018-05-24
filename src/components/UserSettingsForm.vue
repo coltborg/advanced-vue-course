@@ -28,25 +28,25 @@
 </template>
 
 <script>
-import ToggleInput from "./ToggleInput.vue";
+import ToggleInput from './ToggleInput';
 
 export default {
   components: {
-    ToggleInput
+    ToggleInput,
   },
   data() {
     return {
-      email: "jane@example.com",
-      receiveNewsletter: false
+      email: 'jane@example.com',
+      receiveNewsletter: false,
     };
   },
   methods: {
     submit() {
-      console.log("Submitting preferences...", {
+      console.log('Submitting preferences...', {
         email: this.email,
-        receiveNewsletter: this.receiveNewsletter
+        receiveNewsletter: this.receiveNewsletter,
       });
-    }
-  }
+    },
+  },
 };
 </script>

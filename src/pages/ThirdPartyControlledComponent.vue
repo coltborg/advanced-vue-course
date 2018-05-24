@@ -8,12 +8,12 @@
 
 
 <script>
-import DatePickerForm from "../components/DatePickerForm";
+import DatePickerForm from '../components/DatePickerForm';
 
 export default {
-  name: "ThirdPartyControlledComponent",
+  name: 'ThirdPartyControlledComponent',
   components: {
-    DatePickerForm
-  }
+    DatePickerForm,
+  },
 };
 </script>

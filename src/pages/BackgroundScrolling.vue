@@ -32,17 +32,17 @@
 
 
 <script>
-import EnhancedAnnouncementModal from "../components/EnhancedAnnouncementModal";
+import EnhancedAnnouncementModal from '../components/EnhancedAnnouncementModal';
 
 export default {
-  name: "ClosingOnEscape",
+  name: 'ClosingOnEscape',
   components: {
-    EnhancedAnnouncementModal
+    EnhancedAnnouncementModal,
   },
   data() {
     return {
       modalOpen: true,
     };
-  }
+  },
 };
 </script>

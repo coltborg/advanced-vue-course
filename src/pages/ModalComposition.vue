@@ -18,20 +18,20 @@
 </template>
 
 <script>
-import PortalUserSettingsForm from "../components/PortalUserSettingsForm";
-import CompositionAnnouncementModal from "../components/CompositionAnnouncementModal";
+import PortalUserSettingsForm from '../components/PortalUserSettingsForm';
+import CompositionAnnouncementModal from '../components/CompositionAnnouncementModal';
 
 export default {
-  name: "ModalComposition",
+  name: 'ModalComposition',
   components: {
     PortalUserSettingsForm,
-    CompositionAnnouncementModal
+    CompositionAnnouncementModal,
   },
   data() {
     return {
       accountId: 7,
-      showAnnouncement: true
+      showAnnouncement: true,
     };
-  }
+  },
 };
 </script>

@@ -10,21 +10,21 @@
 
 <script>
 export default {
-  name: "ToggleInput",
+  name: 'ToggleInput',
   model: {
-    prop: "toggled",
-    event: "toggle"
+    prop: 'toggled',
+    event: 'toggle',
   },
   props: {
     toggled: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   methods: {
     toggle() {
-      this.$emit("toggle", !this.toggled);
-    }
-  }
+      this.$emit('toggle', !this.toggled);
+    },
+  },
 };
 </script>

@@ -26,54 +26,54 @@
 </template>
 
 <script>
-import ModalDialog from "./ModalDialog";
+import ModalDialog from './ModalDialog';
 
 export default {
-  name: "ConfirmDeleteModal",
+  name: 'ConfirmDeleteModal',
   components: {
-    ModalDialog
+    ModalDialog,
   },
   props: {
     show: {
       type: Boolean,
-      default: false
+      default: false,
     },
     accountId: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
   watch: {
     show: {
       immediate: true,
-      handler: show => {
+      handler: (show) => {
         if (show) {
-          document.body.style.setProperty("overflow", "hidden");
+          document.body.style.setProperty('overflow', 'hidden');
         } else {
-          document.body.style.removeProperty("overflow");
+          document.body.style.removeProperty('overflow');
         }
-      }
-    }
+      },
+    },
   },
   created() {
-    const escapeHandler = e => {
-      if (e.key === "Escape" && this.show) {
+    const escapeHandler = (e) => {
+      if (e.key === 'Escape' && this.show) {
         this.cancel();
       }
     };
-    document.addEventListener("keydown", escapeHandler);
-    this.$once("hook:destroyed", () => {
-      document.removeEventListener("keydown", escapeHandler);
+    document.addEventListener('keydown', escapeHandler);
+    this.$once('hook:destroyed', () => {
+      document.removeEventListener('keydown', escapeHandler);
     });
   },
   methods: {
     cancel() {
-      this.$emit("close");
+      this.$emit('close');
     },
     confirmDelete() {
       console.log(`Deleting account ${this.accountId}...`);
-      this.$emit("close");
-    }
-  }
+      this.$emit('close');
+    },
+  },
 };
 </script>

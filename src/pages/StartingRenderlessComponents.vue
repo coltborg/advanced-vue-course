@@ -2,13 +2,15 @@
   <div class="min-h-screen bg-grey-darker p-8">
     <div class="max-w-sm mx-auto card mt-8">
       <label class="form-label mb-2">Renderless Tags</label>
-      <renderless-tag-input>
+      <renderless-tag-input v-model="tags">
         <div
-          slot-scope="{}"
+          slot-scope="{ tags }"
           class="tag-input">
           <span
+            v-for="tag in tags"
+            :key="tag"
             class="tag-input-tag">
-            <span>sample tag</span>
+            <span>{{ tag }}</span>
             <button
               type="button"
               class="tag-input-remove">
@@ -39,10 +41,10 @@ export default {
     TagInput,
     RenderlessTagInput,
   },
-  data () {
+  data() {
     return {
       tags: ['awesome', 'excellent', 'amazing'],
-    }
-  }
-}
+    };
+  },
+};
 </script>

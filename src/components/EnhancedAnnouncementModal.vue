@@ -32,16 +32,18 @@ export default {
     preventBackgroundScrolling: {
       type: Boolean,
       default: true,
-    }
+    },
   },
   watch: {
     show: {
       immediate: true,
       handler(show) {
         if (show) {
-          this.preventBackgroundScrolling && document.body.style.setProperty('overflow', 'hidden');
+          this.preventBackgroundScrolling &&
+            document.body.style.setProperty('overflow', 'hidden');
         } else {
-          this.preventBackgroundScrolling && document.body.style.removeProperty('overflow');
+          this.preventBackgroundScrolling &&
+            document.body.style.removeProperty('overflow');
         }
       },
     },

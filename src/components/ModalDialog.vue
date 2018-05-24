@@ -17,36 +17,36 @@ export default {
   props: {
     show: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   watch: {
     show: {
       immediate: true,
-      handler: show => {
+      handler: (show) => {
         if (show) {
-          document.body.style.setProperty("overflow", "hidden");
+          document.body.style.setProperty('overflow', 'hidden');
         } else {
-          document.body.style.removeProperty("overflow");
+          document.body.style.removeProperty('overflow');
         }
-      }
-    }
+      },
+    },
   },
   created() {
-    const escapeHandler = e => {
-      if (e.key === "Escape" && this.show) {
+    const escapeHandler = (e) => {
+      if (e.key === 'Escape' && this.show) {
         this.dismiss();
       }
     };
-    document.addEventListener("keydown", escapeHandler);
-    this.$once("hook:destroyed", () => {
-      document.removeEventListener("keydown", escapeHandler);
+    document.addEventListener('keydown', escapeHandler);
+    this.$once('hook:destroyed', () => {
+      document.removeEventListener('keydown', escapeHandler);
     });
   },
   methods: {
     dismiss() {
-      this.$emit("close");
-    }
-  }
+      this.$emit('close');
+    },
+  },
 };
 </script>

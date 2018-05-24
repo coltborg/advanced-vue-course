@@ -11,17 +11,17 @@
 </template>
 
 <script>
-import PortalUserSettingsForm from "../components/PortalUserSettingsForm";
+import PortalUserSettingsForm from '../components/PortalUserSettingsForm';
 
 export default {
-  name: "VuePortals",
+  name: 'VuePortals',
   components: {
-    PortalUserSettingsForm
+    PortalUserSettingsForm,
   },
   data() {
     return {
-      accountId: 7
+      accountId: 7,
     };
-  }
+  },
 };
 </script>

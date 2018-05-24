@@ -19,20 +19,20 @@
 </template>
 
 <script>
-import PortalUserSettingsForm from "../components/PortalUserSettingsForm";
-import AnnouncementModal from "../components/AnnouncementModal";
+import PortalUserSettingsForm from '../components/PortalUserSettingsForm';
+import AnnouncementModal from '../components/AnnouncementModal';
 
 export default {
-  name: "VuePortals",
+  name: 'VuePortals',
   components: {
     PortalUserSettingsForm,
-    AnnouncementModal
+    AnnouncementModal,
   },
   data() {
     return {
       accountId: 7,
-      showAnnouncement: true
+      showAnnouncement: true,
     };
-  }
+  },
 };
 </script>

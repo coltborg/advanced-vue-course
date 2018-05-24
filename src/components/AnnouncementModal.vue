@@ -30,7 +30,7 @@ export default {
       default: false,
     },
   },
-  created () {
+  created() {
     const escapeHandler = (e) => {
       if (this.show && e.key === 'Escape') {
         this.dismiss();

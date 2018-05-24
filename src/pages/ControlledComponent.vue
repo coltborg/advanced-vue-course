@@ -8,12 +8,12 @@
 
 
 <script>
-import UserSettingsForm from "../components/UserSettingsForm";
+import UserSettingsForm from '../components/UserSettingsForm';
 
 export default {
-  name: "ControlledComponent",
+  name: 'ControlledComponent',
   components: {
-    UserSettingsForm
-  }
+    UserSettingsForm,
+  },
 };
 </script>

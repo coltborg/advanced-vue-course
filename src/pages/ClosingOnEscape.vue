@@ -17,17 +17,17 @@
 
 
 <script>
-import AnnouncementModal from "../components/AnnouncementModal";
+import AnnouncementModal from '../components/AnnouncementModal';
 
 export default {
-  name: "ClosingOnEscape",
+  name: 'ClosingOnEscape',
   components: {
-    AnnouncementModal
+    AnnouncementModal,
   },
   data() {
     return {
       modalOpen: false,
     };
-  }
+  },
 };
 </script>
