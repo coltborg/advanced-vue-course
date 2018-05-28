@@ -8,7 +8,11 @@ export default {
   props: {
     tags: {
       type: Array,
-      default: () => [],
+      required: true,
+    },
+    removeOnBackspace: {
+      type: Boolean,
+      default: true,
     },
   },
   data() {
@@ -57,7 +61,7 @@ export default {
       inputEvents: {
         input: (e) => { this.input = e.target.value; },
         keydown: (e) => {
-          if (e.key === 'Backspace') {
+          if (this.removeOnBackspace && e.key === 'Backspace') {
             this.handleBackspace();
           }
           if (e.key === 'Enter') {
