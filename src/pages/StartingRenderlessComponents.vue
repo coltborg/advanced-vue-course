@@ -4,7 +4,7 @@
       <label class="form-label mb-2">Renderless Tags</label>
       <renderless-tag-input v-model="tags">
         <div
-          slot-scope="{ tags, removeTag, inputProps, inputEvents }"
+          slot-scope="{ tags, removeTag, removeButtonEvents, inputProps, inputEvents }"
           class="tag-input">
           <span
             v-for="tag in tags"
@@ -14,7 +14,7 @@
             <button
               type="button"
               class="tag-input-remove"
-              @click="removeTag(tag)">
+              v-on="removeButtonEvents(tag)">
               &times;
             </button>
           </span>

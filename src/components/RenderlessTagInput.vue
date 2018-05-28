@@ -46,6 +46,9 @@ export default {
     return this.$scopedSlots.default({
       tags: this.tags,
       removeTag: this.removeTag,
+      removeButtonEvents: tag => ({
+        click: () => this.removeTag(tag),
+      }),
       inputProps: {
         value: this.input,
       },
