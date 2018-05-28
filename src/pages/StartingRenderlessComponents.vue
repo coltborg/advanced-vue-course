@@ -2,42 +2,13 @@
   <div class="min-h-screen bg-grey-darker p-8">
 
     <div class="max-w-sm mx-auto card mt-8">
-      <label class="form-label mb-2">Renderless Stacked Tags</label>
-      <renderless-tag-input
-        v-model="tags"
-        :remove-on-backspace="false"
-      >
-        <div
-          slot-scope="{ tags, addTag, removeButtonEvents, inputProps, inputEvents }"
-          class="stacked-tag-input">
-          <div class="stacked-tag-input-form">
-            <input
-              v-bind="inputProps"
-              type="text"
-              class="form-input"
-              placeholder="Add tag..."
-              v-on="inputEvents">
-            <button
-              class="btn btn-indigo"
-              @click="addTag">
-              Add Tag
-            </button>
-          </div>
-          <ul class="stacked-tag-list">
-            <li
-              v-for="tag in tags"
-              :key="tag">
-              {{ tag }}
-              <button
-                class="stacked-tag-link"
-                type="button"
-                v-on="removeButtonEvents(tag)">
-                Remove
-              </button>
-            </li>
-          </ul>
-        </div>
-      </renderless-tag-input>
+      <label class="form-label mb-2">Stacked Tags</label>
+      <stacked-tag-input v-model="tags" />
+    </div>
+
+    <div class="max-w-sm mx-auto card mt-8">
+      <label class="form-label mb-2">Inline Tags</label>
+      <inline-tag-input v-model="tags" />
     </div>
 
     <div class="max-w-sm mx-auto card mt-8">
@@ -77,6 +48,8 @@
 
 <script>
 import TagInput from '../components/TagInput';
+import InlineTagInput from '../components/InlineTagInput';
+import StackedTagInput from '../components/StackedTagInput';
 import RenderlessTagInput from '../components/RenderlessTagInput';
 
 export default {
@@ -84,6 +57,8 @@ export default {
   components: {
     TagInput,
     RenderlessTagInput,
+    InlineTagInput,
+    StackedTagInput,
   },
   data() {
     return {
