@@ -46,6 +46,8 @@ export default {
     return this.$scopedSlots.default({
       tags: this.tags,
       removeTag: this.removeTag,
+      addTag: this.addTag,
+      handleBackspace: this.handleBackspace,
       removeButtonEvents: tag => ({
         click: () => this.removeTag(tag),
       }),
