@@ -51,6 +51,11 @@
         class="mr-3 text-blue hover:text-blue-dark no-underline">
         Element queries
       </router-link>
+      <router-link
+        :to="{ name: 'ProvideInjectComponetComponents' }"
+        class="mr-3 text-blue hover:text-blue-dark no-underline">
+        Provide inject componet components
+      </router-link>
     </p>
     <router-view/>
   </div>

@@ -8,6 +8,7 @@ import UsingSlots from '../pages/UsingSlots';
 import ModalComposition from '../pages/ModalComposition';
 import StartingRenderlessComponents from '../pages/StartingRenderlessComponents';
 import ElementQueries from '../pages/ElementQueries';
+import ProvideInjectComponetComponents from '../pages/ProvideInjectComponetComponents';
 
 export default [
   {
@@ -59,5 +60,10 @@ export default [
     component: ElementQueries,
     path: '/element-queries',
     name: 'ElementQueries',
+  },
+  {
+    component: ProvideInjectComponetComponents,
+    path: '/provide-inject-componet-components',
+    name: 'ProvideInjectComponetComponents',
   },
 ];
