@@ -7,6 +7,7 @@ import ReuseVuePortals from '../pages/ReuseVuePortals';
 import UsingSlots from '../pages/UsingSlots';
 import ModalComposition from '../pages/ModalComposition';
 import StartingRenderlessComponents from '../pages/StartingRenderlessComponents';
+import ElementQueries from '../pages/ElementQueries';
 
 export default [
   {
@@ -53,5 +54,10 @@ export default [
     component: StartingRenderlessComponents,
     path: '/starting-renderless-components',
     name: 'StartingRenderlessComponents',
+  },
+  {
+    component: ElementQueries,
+    path: '/element-queries',
+    name: 'ElementQueries',
   },
 ];

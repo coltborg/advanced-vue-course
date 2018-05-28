@@ -46,6 +46,11 @@
         class="mr-3 text-blue hover:text-blue-dark no-underline">
         Starting renderless components
       </router-link>
+      <router-link
+        :to="{ name: 'ElementQueries' }"
+        class="mr-3 text-blue hover:text-blue-dark no-underline">
+        Element queries
+      </router-link>
     </p>
     <router-view/>
   </div>
