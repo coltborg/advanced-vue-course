@@ -9,6 +9,7 @@ import ModalComposition from '../pages/ModalComposition';
 import StartingRenderlessComponents from '../pages/StartingRenderlessComponents';
 import ElementQueries from '../pages/ElementQueries';
 import ProvideInjectComponetComponents from '../pages/ProvideInjectComponetComponents';
+import SortableListComponent from '../pages/SortableListComponent';
 
 export default [
   {
@@ -65,5 +66,10 @@ export default [
     component: ProvideInjectComponetComponents,
     path: '/provide-inject-componet-components',
     name: 'ProvideInjectComponetComponents',
+  },
+  {
+    component: SortableListComponent,
+    path: '/sortable-list-component',
+    name: 'SortableListComponent',
   },
 ];

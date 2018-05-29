@@ -56,6 +56,11 @@
         class="mr-3 text-blue hover:text-blue-dark no-underline">
         Provide inject componet components
       </router-link>
+      <router-link
+        :to="{ name: 'SortableListComponent' }"
+        class="mr-3 text-blue hover:text-blue-dark no-underline">
+        Sortable list component
+      </router-link>
     </p>
     <router-view/>
   </div>
