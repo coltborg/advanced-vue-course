@@ -4,35 +4,43 @@
       <div class="card">
         <h1 class="mb-6 text-2xl font-bold">Your Contacts</h1>
 
-        <div class="contact-list">
+        <sortable-list v-model="contacts">
           <div
-            v-for="contact in contacts"
-            :key="contact.id"
-            class="contact-list-item">
-            <div class="contact-list-contact">
-              <img
-                :src="contact.avatar"
-                class="contact-list-avatar">
-              <div>
-                <div class="contact-list-name">
-                  {{ contact.name }}
+            slot-scope="{ items: contacts }"
+            class="contact-list">
+            <sortable-item
+              v-for="contact in contacts"
+              :key="contact.id">
+              <div
+                class="contact-list-item">
+                <div class="contact-list-contact">
+                  <img
+                    :src="contact.avatar"
+                    class="contact-list-avatar">
+                  <div>
+                    <div class="contact-list-name">
+                      {{ contact.name }}
+                    </div>
+                    <div class="contact-list-email">
+                      {{ contact.email }}
+                    </div>
+                  </div>
                 </div>
-                <div class="contact-list-email">
-                  {{ contact.email }}
-                </div>
+                <sortable-handle>
+                  <svg
+                    class="contact-list-handle"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor">
+                    <path
+                      fill-rule="evenodd"
+                      d="M14 4h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zM8 4h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm6 6h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm-6 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm6 6h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm-6 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"/>
+                  </svg>
+                </sortable-handle>
               </div>
-            </div>
-            <svg
-              class="contact-list-handle"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor">
-              <path
-                fill-rule="evenodd"
-                d="M14 4h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zM8 4h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm6 6h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm-6 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm6 6h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm-6 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"/>
-            </svg>
+            </sortable-item>
           </div>
-        </div>
+        </sortable-list>
       </div>
     </div>
 </div></template>
