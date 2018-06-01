@@ -44,31 +44,29 @@
 
 <script>
 export default {
+  props: {
+    value: {
+      type: null,
+      required: true,
+    },
+    options: {
+      type: Array,
+      required: true,
+    },
+    filterFunction: {
+      type: Function,
+      required: true,
+    },
+  },
   data() {
     return {
       isOpen: false,
-      value: null,
       search: '',
-      options: [
-        'Anthrax',
-        'Dark Angel',
-        'Death Angel',
-        'Destruction',
-        'Exodus',
-        'Flotsam and Jetsam',
-        'Kreator',
-        'Megadeth',
-        'Metallica',
-        'Overkill',
-        'Sepultura',
-        'Slayer',
-        'Testament',
-      ],
     };
   },
   computed: {
     filteredOptions() {
-      return this.options.filter(option => option.toLowerCase().startsWith(this.search.toLowerCase()));
+      return this.filterFunction(this.search, this.options);
     },
   },
   methods: {
@@ -83,7 +81,7 @@ export default {
       this.$refs.button.focus();
     },
     select(option) {
-      this.value = option;
+      this.$emit('input', option);
       this.search = '';
       this.close();
     },
