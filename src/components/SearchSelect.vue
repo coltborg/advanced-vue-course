@@ -3,6 +3,7 @@
     :class="{ 'is-active': isOpen }"
     class="search-select">
     <button
+      ref="button"
       type="button"
       class="search-select-input"
       @click="open">
@@ -17,8 +18,10 @@
       v-show="isOpen"
       class="search-select-dropdown">
       <input
+        ref="search"
         v-model="search"
-        class="search-select-search">
+        class="search-select-search"
+        placeholder="Search...">
       <ul
         v-show="filteredOptions.length > 0"
         class="search-select-options">
@@ -71,9 +74,13 @@ export default {
   methods: {
     open() {
       this.isOpen = true;
+      this.$nextTick(() => {
+        this.$refs.search.focus();
+      });
     },
     close() {
       this.isOpen = false;
+      this.$refs.button.focus();
     },
     select(option) {
       this.value = option;
