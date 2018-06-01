@@ -21,13 +21,20 @@
         ref="search"
         v-model="search"
         class="search-select-search"
-        placeholder="Search...">
+        placeholder="Search..."
+        @keydown.esc="close"
+        @keydown.down="highlightNext"
+        @keydown.up="highlightPrev"
+        @keydown.enter.prevent="selectHighlighted"
+        @keydown.tab.prevent>
       <ul
         v-show="filteredOptions.length > 0"
+        ref="options"
         class="search-select-options">
         <li
-          v-for="option in filteredOptions"
+          v-for="(option, i) in filteredOptions"
           :key="option"
+          :class="{ 'is-active': i === highlightedIndex }"
           class="search-select-option"
           @click="select(option)">
           {{ option }}
@@ -62,6 +69,7 @@ export default {
     return {
       isOpen: false,
       search: '',
+      highlightedIndex: 0,
     };
   },
   computed: {
@@ -71,9 +79,14 @@ export default {
   },
   methods: {
     open() {
+      if (this.isOpen) {
+        return;
+      }
+
       this.isOpen = true;
       this.$nextTick(() => {
         this.$refs.search.focus();
+        this.scrollToHighlighted();
       });
     },
     close() {
@@ -83,7 +96,33 @@ export default {
     select(option) {
       this.$emit('input', option);
       this.search = '';
+      this.highlightedIndex = 0;
       this.close();
+    },
+    selectHighlighted() {
+      this.select(this.filteredOptions[this.highlightedIndex]);
+    },
+    scrollToHighlighted() {
+      this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' });
+    },
+    highlight(index) {
+      this.highlightedIndex = index;
+
+      if (this.highlightedIndex < 0) {
+        this.highlightedIndex = this.filteredOptions.length - 1;
+      }
+
+      if (this.highlightedIndex > this.filteredOptions.length - 1) {
+        this.highlightedIndex = 0;
+      }
+
+      this.scrollToHighlighted();
+    },
+    highlightPrev() {
+      this.highlight(this.highlightedIndex - 1);
+    },
+    highlightNext() {
+      this.highlight(this.highlightedIndex + 1);
     },
   },
 };
