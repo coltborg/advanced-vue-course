@@ -61,6 +61,11 @@
         class="mr-3 text-blue hover:text-blue-dark no-underline">
         Sortable list component
       </router-link>
+      <router-link
+        :to="{ name: 'SearchSelectComponent' }"
+        class="mr-3 text-blue hover:text-blue-dark no-underline">
+        Search select component
+      </router-link>
     </p>
     <router-view/>
   </div>

@@ -10,6 +10,7 @@ import StartingRenderlessComponents from '../pages/StartingRenderlessComponents'
 import ElementQueries from '../pages/ElementQueries';
 import ProvideInjectComponetComponents from '../pages/ProvideInjectComponetComponents';
 import SortableListComponent from '../pages/SortableListComponent';
+import SearchSelectComponent from '../pages/SearchSelectComponent';
 
 export default [
   {
@@ -71,5 +72,10 @@ export default [
     component: SortableListComponent,
     path: '/sortable-list-component',
     name: 'SortableListComponent',
+  },
+  {
+    component: SearchSelectComponent,
+    path: '/search-select-component',
+    name: 'SearchSelectComponent',
   },
 ];
