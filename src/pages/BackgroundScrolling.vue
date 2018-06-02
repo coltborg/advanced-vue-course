@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-grey-lighter">
     <div class="p-8">
       <div class="max-w-sm mx-auto">
         <p class="mb-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, asperiores voluptatibus? Id, assumenda. Consequatur recusandae quo corrupti id eligendi veritatis reprehenderit rerum quae accusantium. Enim incidunt ut optio sapiente. Necessitatibus.</p>

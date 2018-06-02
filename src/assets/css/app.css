@@ -843,6 +843,12 @@ html {
   padding: 0.5rem 0.75rem;
   color: #b8c2cc;
 }
+.grid {
+  display: grid;
+  grid-template:
+    1fr
+    / 16rem 1fr;
+}
 .list-reset {
   list-style: none;
   padding: 0;

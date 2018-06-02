@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="bg-grey-lighter">
     <div class="min-h-screen flex items-center justify-center">
       <button
         type="button"
