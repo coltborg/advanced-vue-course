@@ -53,8 +53,8 @@
 </template>
 
 <script>
-import OnClickOutside from '../components/OnClickOutside';
 import Popper from 'popper.js';
+import OnClickOutside from '../components/OnClickOutside';
 
 export default {
   components: {
