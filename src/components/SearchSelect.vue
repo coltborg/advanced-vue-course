@@ -17,6 +17,7 @@
       </button>
       <div
         v-show="isOpen"
+        ref="dropdown"
         class="search-select-dropdown">
         <input
           ref="search"
@@ -53,6 +54,7 @@
 
 <script>
 import OnClickOutside from '../components/OnClickOutside';
+import Popper from 'popper.js';
 
 export default {
   components: {
@@ -84,6 +86,9 @@ export default {
       return this.filterFunction(this.search, this.options);
     },
   },
+  beforeDestroy() {
+    this.popper.destroy();
+  },
   methods: {
     open() {
       if (this.isOpen) {
@@ -94,6 +99,7 @@ export default {
       this.$nextTick(() => {
         this.$refs.search.focus();
         this.scrollToHighlighted();
+        this.setupPopper();
       });
     },
     close() {
@@ -103,6 +109,16 @@ export default {
 
       this.isOpen = false;
       this.$refs.button.focus();
+    },
+    setupPopper() {
+      if (this.popper === undefined) {
+        this.popper = new Popper(this.$refs.button, this.$refs.dropdown, {
+          placement: 'bottom',
+        });
+      } else {
+        this.popper.scheduleUpdate();
+        console.log('update popper 🎉');
+      }
     },
     select(option) {
       this.$emit('input', option);
