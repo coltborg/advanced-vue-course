@@ -4,6 +4,12 @@
     "titleBar.inactiveForeground": "#ffffffcc",
     "titleBar.activeBackground": "#47b784",
     "titleBar.inactiveBackground": "#47b784cc",
+    "[Monokai Pro]": {
+      "titleBar.activeForeground": "#ffffff",
+      "titleBar.inactiveForeground": "#ffffffcc",
+      "titleBar.activeBackground": "#47b784",
+      "titleBar.inactiveBackground": "#47b784cc",
+    },
   },
   "editor.formatOnSave": true,
   "[javascript]": {
